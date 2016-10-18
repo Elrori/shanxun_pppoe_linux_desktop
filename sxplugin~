@@ -1,0 +1,15 @@
+# /etc/ppp/peers/sxplugin
+
+user "18158509976@DZKD.XY" #serch name from pap-secrets
+plugin rp-pppoe.so
+plugin sxplugin.so
+
+# network interface
+eth0
+#usepeerdns
+#persist
+debug
+defaultroute
+#hide-password
+noauth
+nodetach

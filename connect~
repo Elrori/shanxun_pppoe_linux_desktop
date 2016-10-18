@@ -1,0 +1,30 @@
+#!/bin/bash
+# useage: ./connect <password>
+USERDIR=$(who | awk '{print $1}' | sed -n '1p')
+
+if [ $1 ]
+then
+if [ $2 ]
+then
+	if [ $1 = "stop" ]
+	then
+		sudo killall pppd > /dev/null
+	else
+		if [ $1 = "-h" -o $1 = "--help" ]
+		then
+			echo -e "connect [NULL|password|stop|-h|--help].press your password to connect or press nothing to use you last password to connect;only press stop to disconnect the net"
+		else
+			echo "$1 $2" > /home/${USERDIR}/appdata/sxappdate
+			/usr/local/bin/pppd_sx.sh $1 $2
+			echo "PASSWORD SAVED IN ${USERDIR}"
+		fi
+	fi
+fi
+else
+	USAERNAME=$(cat /home/${USERDIR}/appdata/sxappdate | awk '{print $1}')
+	PASSWD=$(cat /home/${USERDIR}/appdata/sxappdate | awk '{print $2}')
+	/usr/local/bin/pppd_sx.sh $USAERNAME $PASSWD
+	echo "PASSWORD USED IN ${USERDIR}"
+fi
+
+exit 0

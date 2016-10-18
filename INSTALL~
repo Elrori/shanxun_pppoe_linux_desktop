@@ -1,0 +1,10 @@
+#!/bin/bash
+make clean
+make $1 # make .so
+make install # cp *.so /usr/lib/pppd/${PPPD_VER}/
+ETH=$(ifconfig eth|grep eth|awk '{print $1}') # 取有线网卡名，当有多块网卡时可能出现问题
+echo -e "#!/bin/bash\nroute del default\npppd nodetach defaultroute usepeerdns maxfail 1 user \$1 password \$2 mtu 1492 mru 1492 plugin rp-pppoe.so nic-${ETH} plugin ${1}.so" > pppd_sx.sh
+cp pppd_sx.sh /usr/local/bin/
+chmod a+x /usr/local/bin/pppd_sx.sh
+cp connect_sx /usr/local/bin/
+chmod a+x /usr/local/bin/connect_sx

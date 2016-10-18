@@ -1,0 +1,42 @@
+#!/bin/bash
+# useage: connect_sx <username> <password> or connect_sx <password>  or connect_sx
+USERDIR=$(who | awk '{print $1}' | sed -n '1p')
+FLAG=1
+if [ $1 ] && [ $2 ]
+then
+	echo "$1 $2" > /home/${USERDIR}/sxappdate
+	echo "USERNAME AND PASSWORD SAVED IN ${USERDIR}"
+	/usr/local/bin/pppd_sx.sh $1 $2
+else
+	FLAG=0
+fi
+
+if [ $FLAG = 0 ]
+then
+	if [ $1 ]
+	then
+		if [ $1 = "-h" -o $1 = "--help" ]
+		then
+			echo -e "useage: connect_sx <username> <password> or connect_sx <password>  or connect_sx"
+		else
+			if [ $1 = "stop" ]
+			then
+				killall pppd
+			else
+				USERNAME=$(cat /home/${USERDIR}/sxappdate | awk '{print $1}')
+				echo "$USERNAME $1" > /home/${USERDIR}/sxappdate
+				echo "USERNAME USED IN ${USERDIR}"
+				/usr/local/bin/pppd_sx.sh $USERNAME $1
+			fi		
+		fi
+	else
+		USERNAME=$(cat /home/${USERDIR}/sxappdate | awk '{print $1}')
+		PASSWD=$(cat /home/${USERDIR}/sxappdate | awk '{print $2}')
+		echo "USERNAME AND PASSWORD USED IN ${USERDIR}"
+		/usr/local/bin/pppd_sx.sh $USERNAME $PASSWD
+		
+	fi
+	
+fi
+
+exit 0

@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Enter your shanxun username:" 
+read USERNAME
+echo "\"${USERNAME}\" * " >> /etc/ppp/pap-secrets
+make sxplugin
+
