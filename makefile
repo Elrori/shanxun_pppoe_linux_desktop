@@ -9,7 +9,7 @@
 LOCATION=/usr
 #TODO:请查找目录LOCATION/bin/ 下gcc编译器的具体名字填在下面
 CC=$(LOCATION)/bin/gcc
-#TODO:必须修改pppd的版本，取决于路由器(电脑)的/usr/lib/pppd/，主流2.4.7,ubuntu 14.04 2.4.5
+#TODO:必须修改pppd的版本，取决于路由器(电脑)的/usr/lib/pppd/下的版本号，ubuntu 14.04 2.4.5,raspbian 2.4.6,openwrt主流2.4.7
 PPPD_VER=2.4.5
 
 CFLAGS=-Os -Werror -I$(LOCATION)/include -fPIC -DPPPOE_VER='"${PPPD_VER}"'
