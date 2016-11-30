@@ -4,6 +4,7 @@ shanxun_pppoe_linux_desktop 使用 Leon - <miao1007@gmail.com>同学的源码
 ###依赖：pppd 
 ###使用方法：
 1 修改或确认makefile文件的TODO项
+
 2 安装，进入src目录执行：
 ```
 sudo chmod a+x INSTALL
