@@ -1,1 +1,1 @@
-# shanxun_pppoe_linux_desktop
+## see README-CN.md
