@@ -15,8 +15,7 @@ sudo ./INSTALL zhejiang_xiaoyuan_sxplugin
 ```
 sudo connect_sx <username> <password> 
 ```
-例如：sudo connect_sx 18166666666@DZKD.XY 123456 即可连上闪讯；再一次连接使用上一次帐号密码直接执行 sudo connect_sx ; 更换密码 sudo connect_sx 
-\<password>
+例如：```sudo connect_sx 18166666666@DZKD.XY 123456``` 即可连上闪讯；再一次连接使用上一次帐号密码直接执行 ```sudo connect_sx``` ; 更换密码 ```sudo connect_sx <password>```
 
 4 断开连接：
 ```
