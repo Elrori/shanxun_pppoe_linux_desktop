@@ -5,7 +5,7 @@ FLAG=1
 if [ $1 ] && [ $2 ]
 then
 	echo "$1 $2" > /home/${USERDIR}/sxappdate
-	echo "USERNAME AND PASSWORD SAVED IN ${USERDIR}"
+	echo "USERNAME AND PASSWORD SAVED IN /home/${USERDIR}/sxappdate"
 	/usr/local/bin/pppd_sx.sh $1 $2
 else
 	FLAG=0
@@ -25,14 +25,14 @@ then
 			else
 				USERNAME=$(cat /home/${USERDIR}/sxappdate | awk '{print $1}')
 				echo "$USERNAME $1" > /home/${USERDIR}/sxappdate
-				echo "USERNAME USED IN ${USERDIR}"
+				echo "USERNAME USED IN /home/${USERDIR}/sxappdate"
 				/usr/local/bin/pppd_sx.sh $USERNAME $1
 			fi		
 		fi
 	else
 		USERNAME=$(cat /home/${USERDIR}/sxappdate | awk '{print $1}')
 		PASSWD=$(cat /home/${USERDIR}/sxappdate | awk '{print $2}')
-		echo "USERNAME AND PASSWORD USED IN ${USERDIR}"
+		echo "USERNAME AND PASSWORD USED IN /home/${USERDIR}/sxappdate"
 		/usr/local/bin/pppd_sx.sh $USERNAME $PASSWD
 		
 	fi
