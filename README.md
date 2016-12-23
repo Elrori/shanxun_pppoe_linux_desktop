@@ -1,4 +1,4 @@
-shanxun_pppoe_linux_desktop 使用 Leon - <miao1007@gmail.com>同学的源码,因为没有x86-ubuntu上的闪讯拨号软件，直接使用Openwrt-NetKeeper插件，外加shell脚本就可以方便的拨号，核心仍是帐号算法(real name 前8位码不按照此刻时间得出的值也可能拨通)，这个安装脚本只是方便拨号而已！win版完成（感谢室友C#;CSDN地址:http://blog.csdn.net/qq_33212020/article/details/52972188 ）。
+shanxun_pppoe_linux_desktop 使用 Leon - <miao1007@gmail.com>同学的源码,因为没有x86-ubuntu上的闪讯拨号软件，直接使用Openwrt-NetKeeper插件，外加shell脚本就可以方便的拨号，核心仍是帐号算法(real name 前8位码不按照此刻时间得出的值也可能拨通)，这个安装脚本只是方便拨号而已！win版完成（感谢室友C#;CSDN地址：http://blog.csdn.net/qq_33212020/article/details/52972188 ）。
 ###不支持心跳!
 脚本调用pppd命令拨号，pppd同时调用NetKeeper插件计算账号！不支持心跳！
 ###依赖：pppd 
