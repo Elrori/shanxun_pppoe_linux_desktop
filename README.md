@@ -37,5 +37,5 @@ pppd nodetach defaultroute usepeerdns maxfail 1 user <your username> password <y
 
 项目页：https://github.com/miao1007/Openwrt-NetKeeper
 
-##Authors
+Authors
  shell script : helrori - <helrori2011@gmail.com> in HDU 2016.10.18
