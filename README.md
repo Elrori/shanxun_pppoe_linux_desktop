@@ -32,7 +32,10 @@ pppd nodetach defaultroute usepeerdns maxfail 1 user <your username> password <y
 注意：显示连接成功但是无法连接外网，请配置路由表.```connect_sx stop``` 后如果无法使用无线网,请配置路由表或重启网络服务
 ###感谢 
 算法源码使用了Openwrt-NetKeeper 
+
 作者：Leon - miao1007@gmail.com
+
 项目页：https://github.com/miao1007/Openwrt-NetKeeper
-###Authors
+
+##Authors
  shell script : helrori - <helrori2011@gmail.com> in HDU 2016.10.18
