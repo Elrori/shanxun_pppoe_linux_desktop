@@ -1,3 +1,4 @@
+**电信在5月XX日开了心跳验证,掉线间隔时间十几到两小时之间.心跳方法似乎已经更新**
 shanxun_pppoe_linux_desktop 使用 Leon - <miao1007@gmail.com>的源码,因为没有ubuntu上的闪讯拨号软件,直接使用Openwrt-NetKeeper插件，外加shell脚本就可以方便的拨号,``拨号命令在pppd_sx.sh内``.
 ###不支持心跳!
 脚本调用pppd命令拨号，pppd同时调用NetKeeper插件计算账号！不支持心跳！
