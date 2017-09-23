@@ -31,7 +31,8 @@ sudo connect_sx stop
 pppd noauth nodetach defaultroute usepeerdns maxfail 1 user <your username> password <your password> mtu 1492 mru 1492 plugin rp-pppoe.so nic-eth0 plugin zhejiang_xiaoyuan_sxplugin.so
 ```
 动态链接库需要根据地区更改.nic-eth0可能需要更改.
-注意：显示连接成功但是无法连接外网，请配置路由表.```connect_sx stop``` 后如果无法使用无线网,请配置路由表或重启网络服务
+注意：显示连接成功但是无法连接外网，请配置路由表.
+```connect_sx stop``` 后如果无法使用无线网,请配置路由表或重启网络服务
 
 **感谢**
 
