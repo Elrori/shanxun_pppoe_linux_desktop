@@ -1,5 +1,5 @@
 #This is a demo for MTK7620A bcm2710(raspberrypi3) ubuntu 14.04 (all test OK)
-#bcm2710(raspberrypi3)'s Toolchain dowmload from https://downloads.lede-project.org/snapshots/targets/brcm2708/bcm2710/lede-sdk-brcm2708-bcm2710_gcc-5.4.0_musl-1.1.15_eabi.Linux-x86_64.tar.bz2
+#bcm2710(raspberrypi3)'s Toolchain dowmload from https://downloads.lede-project.org/snapshots/targets/brcm2708/bcm2710/
 #openwrt(lede) on bcm2710(raspberrypi3) test OK,version 2016-09-23-raspbian-jessie
 #makefile，sxplugin use Leon - <miao1007@gmail.com> 's script
 #感谢 Leon - <miao1007@gmail.com> https://github.com/miao1007/Openwrt-NetKeeper/
