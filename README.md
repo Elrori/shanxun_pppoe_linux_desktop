@@ -1,7 +1,5 @@
 
-shanxun_pppoe_linux_desktop 使用 Leon - <miao1007@gmail.com>的源码,因为没有ubuntu上的闪讯拨号软件,直接使用Openwrt-NetKeeper插件，外加shell脚本就可以方便的拨号,``拨号命令在pppd_sx.sh内``.
-###不支持心跳!
-脚本调用pppd命令拨号，pppd同时调用NetKeeper插件计算账号！不支持心跳！
+shanxun_pppoe_linux_desktop是linux上使用pppd进行闪讯拨号上网的脚本.实际上只使用了pppd命令.动态链接库的编译使用 Leon - <miao1007@gmail.com>的源码``拨号命令在pppd_sx.sh内``.脚本调用pppd命令拨号，pppd同时调用.so插件计算账号.
 
 **依赖：pppd** 
 ```
@@ -28,9 +26,9 @@ sudo connect_sx stop
 ```
 5 可以直接使用pppd命令拨号:
 ```
-pppd noauth nodetach defaultroute usepeerdns maxfail 1 user <your username> password <your password> mtu 1492 mru 1492 plugin rp-pppoe.so nic-eth0 plugin zhejiang_xiaoyuan_sxplugin.so
+pppd noauth nodetach defaultroute usepeerdns maxfail 1 user <your username> password <your password> mtu 1492 mru 1492 plugin rp-pppoe.so <network card name> plugin zhejiang_xiaoyuan_sxplugin.so
 ```
-动态链接库需要根据地区更改.nic-eth0可能需要更改.
+其中动态链接库需要根据地区更改.
 注意：显示连接成功但是无法连接外网，请配置路由表.
 
 ```connect_sx stop``` 后如果无法使用无线网,请配置路由表或重启网络服务
@@ -45,3 +43,4 @@ pppd noauth nodetach defaultroute usepeerdns maxfail 1 user <your username> pass
 
 Authors
  shell script : helrori - <helrori2011@gmail.com> in HDU 2016.10.18
+ 脚本不会被再次修改.
